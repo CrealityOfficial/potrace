@@ -21,3 +21,7 @@ set(SRCS
  )
 
 __add_real_target(potrace lib SOURCE ${SRCS} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+
+if(CC_INSTALL_POTRACE)
+	__install_directory_specif(${CMAKE_CURRENT_SOURCE_DIR}/ potrace)
+endif()
